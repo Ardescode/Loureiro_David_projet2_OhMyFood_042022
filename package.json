@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "project3_OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ardescode/Loureiro_David_projet2_OhMyFood_042022.git"
+  },
+  "author": "ardescode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ardescode/Loureiro_David_projet2_OhMyFood_042022/issues"
+  },
+  "homepage": "https://github.com/Ardescode/Loureiro_David_projet2_OhMyFood_042022#readme"
+}
