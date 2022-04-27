@@ -1,4 +1,12 @@
-.container{
+.container {
     width: 1440px;
-    margin: 0 auto;
+    margin: auto;
+    @include respond(petit){
+       width: 100%;
+       margin: auto;
+    }
+    @include respond(moyen){
+       width: 100%;
+       margin: auto;
+    }
 }
