@@ -3,6 +3,26 @@
       @media (max-width: 900px) { @content }
     }
     @if($breakpoint == petit)  {
-      @media (max-width: 600px) { @content }
+      @media (max-width: 768px) { @content }
     }
+  };
+
+@mixin gradient($direction, $list){
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);  
+}
+
+@mixin lighten-hover($colour){
+  @if(lightness($colour) < 25%){
+    $colour:lighten($colour, 50%);
+
+   }@else{
+    $colour: darken($colour, 20%);
+ 
   }
+}
+
+
+
