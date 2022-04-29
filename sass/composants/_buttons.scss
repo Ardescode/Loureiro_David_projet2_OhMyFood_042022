@@ -2,11 +2,11 @@
     padding: 15px 20px 15px 20px;
     border-radius: 30px;
     font-size:16px;
-    /* @include gradient(355deg, $list); */
-    background: $primary_color;
+    @include gradient(355deg, $list);
+    
    
     color: white;
-    transition: all 800ms;
+    transition: box-shadow 800ms ease-in-out;
     &:hover{
         cursor: pointer;        
         box-shadow: 0 2px 20px $primary_color;

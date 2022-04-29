@@ -1,8 +1,4 @@
 .container {
-    width: 1440px;
-    margin: auto;
-    @include respond(moyen){
-      width: 100%;
-      margin: auto;
-   }
+   max-width: 100%;
+   margin: auto;
 }
