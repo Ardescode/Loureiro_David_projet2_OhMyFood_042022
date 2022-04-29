@@ -1,0 +1,23 @@
+.landingPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #F6F6F6;
+    height: 300px;
+    text-align: center;
+
+    .landingPage__title {
+        width: 80%;
+        margin-bottom: 2%;
+        font-size: 2em;
+    }
+    .landingPage__baseline{
+        width: 70%;
+    }
+    .landingPage__CTA{
+        @include CTA;
+        margin-top: 2%;
+    }
+}

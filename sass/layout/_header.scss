@@ -1,0 +1,54 @@
+nav {
+    display: flex;
+    width: 100%;
+
+    @include respond(petit) {
+        flex-direction: column;
+    }
+}
+
+.nav__logo {
+    width: 50%;
+    position: relative;
+    display: flex;
+    padding-top: 2%;
+    height: 60px;
+
+    @include respond(petit) {
+        width: 100%;
+        justify-content: center;
+        box-shadow: 0 2px 5px #cfcfcf;
+
+        img {
+            width: 40%;
+        }
+    }
+}
+
+.nav__localisation {
+    width: 50%;
+    display: flex;
+    height: 50px;
+
+    .nav__localisation--txt {
+        width: 40%;
+        color: #353535;
+        font-weight: 700;
+        font-size: 1em;
+
+        .nav__localisation--icon {
+            margin-right: 5%;
+        }
+    }
+
+    @include respond(petit) {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: #EAEAEA;
+
+        img {
+            width: 40%;
+        }
+    }
+}

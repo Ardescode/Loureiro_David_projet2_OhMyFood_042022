@@ -1,24 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .container {
   width: 1440px;
   margin: auto;
-}
-@media (max-width: 600px) {
-  .container {
-    width: 100%;
-    margin: auto;
-  }
 }
 @media (max-width: 900px) {
   .container {
     width: 100%;
     margin: auto;
   }
+}
+
+nav {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+.nav__logo {
+  width: 50%;
+  position: relative;
+  display: flex;
+  padding-top: 2%;
+  height: 60px;
+}
+@media (max-width: 768px) {
+  .nav__logo {
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0 2px 5px #cfcfcf;
+  }
+  .nav__logo img {
+    width: 40%;
+  }
+}
+
+.nav__localisation {
+  width: 50%;
+  display: flex;
+  height: 50px;
+}
+.nav__localisation .nav__localisation--txt {
+  width: 40%;
+  color: #353535;
+  font-weight: 700;
+  font-size: 1em;
+}
+.nav__localisation .nav__localisation--txt .nav__localisation--icon {
+  margin-right: 5%;
+}
+@media (max-width: 768px) {
+  .nav__localisation {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #EAEAEA;
+  }
+  .nav__localisation img {
+    width: 40%;
+  }
+}
+
+.landingPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #F6F6F6;
+  height: 300px;
+  text-align: center;
+}
+.landingPage .landingPage__title {
+  width: 80%;
+  margin-bottom: 2%;
+  font-size: 2em;
+}
+.landingPage .landingPage__baseline {
+  width: 70%;
+}
+.landingPage .landingPage__CTA {
+  padding: 15px 20px 15px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  /* @include gradient(355deg, $list); */
+  background: #9356DC;
+  color: white;
+  transition: all 800ms;
+  margin-top: 2%;
+}
+.landingPage .landingPage__CTA:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 20px #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
