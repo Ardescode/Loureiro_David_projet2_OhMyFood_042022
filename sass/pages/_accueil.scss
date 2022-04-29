@@ -1,10 +1,16 @@
+/* 
+////////////////////////////////////////LandingPAGE ////////////////////////////////////////
+*/
+main{
+    max-width: 100%;
+}
 .landingPage {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    background-color: #F6F6F6;
+    background-color:$lightgrey;
     height: 300px;
     text-align: center;
 
@@ -13,11 +19,115 @@
         margin-bottom: 2%;
         font-size: 2em;
     }
-    .landingPage__baseline{
+
+    .landingPage__baseline {
         width: 70%;
     }
-    .landingPage__CTA{
+
+    .landingPage__CTA {
         @include CTA;
         margin-top: 2%;
+    }
+}
+
+/* 
+////////////////////////////////////////FONCTIONNEMENT ////////////////////////////////////////
+*/
+.workingProcess {
+    @include flex_center;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    
+    @include respond(petit){
+        height: 380px;
+    }
+}
+.workingProcess__title{  
+    @include title;
+}
+.workingProcess__help {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    justify-content: space-evenly;
+    font-size: 16px;
+
+    .workingProcess__help--card {
+        @include working-process__card;
+    }
+
+    @include respond(petit) {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 80%;
+    }
+}
+
+/* 
+////////////////////////////////////////RESTAURANTS ////////////////////////////////////////
+*/
+.restaurant {
+    @include flex_center;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    height: 1320px;
+}
+.restaurant__title{
+    @include title
+}
+.restaurant__grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 80%;
+    @include respond(petit){
+        flex-flow: column ;
+    }
+}
+
+.restaurant__card{
+    @include flex_center;
+    flex-direction: column;
+    width: 85%;
+    height: 250px;
+    border-radius: 15px;
+    background: red;
+    position:relative;
+    &--etiquette{
+        position: absolute;
+        z-index: 2;
+        padding: 1% 2% 1% 2%;
+        background: $last_color;
+        right: 10px;
+        top: 10px;
+        border-radius: 2px;
+        color: darken($last_color, 50%);        
+    }
+    &--header{
+        width: 100%;
+        height: 70%;
+        border-radius: 15px 15px 0 0;
+        overflow: hidden;
+        position: relative;
+        .restaurant__card--img{
+            position: absolute;
+            width: 100%;         
+            top: 40%;
+            transform: translate(0%, -50%);
+            
+        }
+    }
+    &--body{
+        width: 100%;
+        height: 30%;
+        @include flex_center;
+        justify-content: space-between;
+        
     }
 }

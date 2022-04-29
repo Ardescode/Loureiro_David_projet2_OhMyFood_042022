@@ -1,9 +1,12 @@
 nav {
     display: flex;
     width: 100%;
+    padding: 1%;
+    justify-content: space-between;
 
     @include respond(petit) {
         flex-direction: column;
+        padding: 0;
     }
 }
 
@@ -11,17 +14,19 @@ nav {
     width: 50%;
     position: relative;
     display: flex;
-    padding-top: 2%;
+
     height: 60px;
+
+    img {
+        width: 35%;
+    }
 
     @include respond(petit) {
         width: 100%;
         justify-content: center;
         box-shadow: 0 2px 5px #cfcfcf;
+        padding-top: 2%;
 
-        img {
-            width: 40%;
-        }
     }
 }
 
@@ -29,15 +34,18 @@ nav {
     width: 50%;
     display: flex;
     height: 50px;
+    align-items: center;
+    
 
     .nav__localisation--txt {
-        width: 40%;
+        width: 100%;
         color: #353535;
         font-weight: 700;
         font-size: 1em;
-
+        text-align: end;
+        
         .nav__localisation--icon {
-            margin-right: 5%;
+            margin-right: 2%;
         }
     }
 
@@ -46,9 +54,12 @@ nav {
         justify-content: center;
         align-items: center;
         background: #EAEAEA;
-
-        img {
+        .nav__localisation--txt{
             width: 40%;
+            text-align: start;
+        }
+        .nav__localisation--icon {
+            margin-right: 5%;
         }
     }
 }
