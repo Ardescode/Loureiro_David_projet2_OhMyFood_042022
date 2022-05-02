@@ -195,6 +195,7 @@ main{
                 -webkit-text-stroke-color: black;
                 &:hover{
                     background: -webkit-linear-gradient(60deg, $secondary_color,$primary_color);
+                    background-clip:text ;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     -webkit-text-stroke: 0px ;
