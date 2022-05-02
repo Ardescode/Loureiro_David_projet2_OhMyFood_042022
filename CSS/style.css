@@ -137,6 +137,7 @@ main {
   flex-direction: column;
   width: 100%;
   height: 250px;
+  margin-bottom: 10%;
 }
 @media (max-width: 768px) {
   .workingProcess {
@@ -147,10 +148,12 @@ main {
 .workingProcess__title {
   display: flex;
   align-items: center;
-  height: 20%;
+  height: 10%;
   align-self: flex-start;
   width: 90%;
   margin-left: 5%;
+  margin-top: 3%;
+  font-size: 2em;
 }
 
 .workingProcess__help {
@@ -169,6 +172,7 @@ main {
   height: 70px;
   border-radius: 20px;
   position: relative;
+  box-shadow: 0 0 10px #d6d6d6;
 }
 @media (max-width: 768px) {
   .workingProcess__help .workingProcess__help--card {
@@ -224,19 +228,26 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: start;
   flex-direction: column;
   position: relative;
   height: 1320px;
+  background: #F6F6F6;
+}
+@media (max-width: 768px) {
+  .restaurant {
+    height: 995px;
+  }
 }
 
 .restaurant__title {
   display: flex;
   align-items: center;
-  height: 20%;
+  height: 10%;
   align-self: flex-start;
   width: 90%;
   margin-left: 5%;
+  margin-top: 3%;
+  font-size: 2em;
 }
 
 .restaurant__grid {
@@ -250,6 +261,7 @@ main {
 @media (max-width: 768px) {
   .restaurant__grid {
     flex-flow: column;
+    height: 95%;
   }
 }
 
@@ -258,10 +270,10 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 85%;
-  height: 250px;
+  width: 45%;
+  height: 450px;
   border-radius: 15px;
-  background: red;
+  box-shadow: 0 0 10px #d6d6d6;
   position: relative;
 }
 .restaurant__card--etiquette {
@@ -284,16 +296,41 @@ main {
 .restaurant__card--header .restaurant__card--img {
   position: absolute;
   width: 100%;
-  top: 40%;
-  transform: translate(0%, -50%);
+  top: 50%;
+  transform: translate(0%, -55%);
 }
 .restaurant__card--body {
   width: 100%;
   height: 30%;
+  background: white;
+  border-radius: 0 0 15px 15px;
+  padding: 2% 10% 2% 2%;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
+}
+.restaurant__card--body color:black .restaurant__card--body-description h3 {
+  font-size: 1.2em;
+}
+.restaurant__card--body .restaurant__card--body-heart i {
+  font-size: 1.5em;
+  color: transparent;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+}
+.restaurant__card--body .restaurant__card--body-heart i:hover {
+  background: -webkit-linear-gradient(60deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px;
+}
+@media (max-width: 768px) {
+  .restaurant__card {
+    width: 85%;
+    height: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

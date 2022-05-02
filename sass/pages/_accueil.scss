@@ -38,7 +38,7 @@ main{
     flex-direction: column;
     width: 100%;
     height: 250px;
-    
+    margin-bottom: 10%;
     @include respond(petit){
         height: 380px;
     }
@@ -55,7 +55,52 @@ main{
     font-size: 16px;
 
     .workingProcess__help--card {
-        @include working-process__card;
+        display: flex;  
+        align-items: center;
+        width: 25%;
+        background:$lightgrey;
+        height: 70px;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 0 0 10px #d6d6d6;
+        @include respond(petit){
+          width: 85%;
+        }
+        &Number{
+          position: absolute;
+          top:50%;
+          left:0%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translate(-50%,-50%);
+          background:$primary_color;
+          color:white;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+        &Icone{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25%;
+          color: #7e7e7e;
+        
+        }
+        &Txt{
+         
+          text-align: start;
+          justify-self: flex-start;
+          font-weight: bold;
+        }
+        &:hover{
+          cursor: pointer;
+          background: #F5EDFF;
+        }
+        &:hover > .workingProcess__help--cardIcone {
+          color: $primary_color;
+      }
     }
 
     @include respond(petit) {
@@ -71,13 +116,16 @@ main{
 */
 .restaurant {
     @include flex_center;
-    justify-content: start;
     flex-direction: column;
     position: relative;
     height: 1320px;
+    background: $lightgrey;
+    @include respond(petit){
+        height: 995px;
+    }
 }
 .restaurant__title{
-    @include title
+    @include title;    
 }
 .restaurant__grid{
     display: flex;
@@ -88,16 +136,17 @@ main{
     height: 80%;
     @include respond(petit){
         flex-flow: column ;
+        height: 95%;
     }
 }
 
 .restaurant__card{
     @include flex_center;
     flex-direction: column;
-    width: 85%;
-    height: 250px;
+    width: 45%;
+    height: 450px;
     border-radius: 15px;
-    background: red;
+    box-shadow: 0 0 10px #d6d6d6;
     position:relative;
     &--etiquette{
         position: absolute;
@@ -112,22 +161,50 @@ main{
     &--header{
         width: 100%;
         height: 70%;
-        border-radius: 15px 15px 0 0;
+        border-radius: 15px 15px 0 0 ;
         overflow: hidden;
         position: relative;
         .restaurant__card--img{
             position: absolute;
             width: 100%;         
-            top: 40%;
-            transform: translate(0%, -50%);
+            top: 50%;
+            transform: translate(0%, -55%);
             
         }
     }
     &--body{
         width: 100%;
         height: 30%;
+        background: white;
+        border-radius:0 0 15px 15px ;
+        padding: 2% 10% 2% 2%;
+        color: black;
         @include flex_center;
         justify-content: space-between;
-        
+        color:black  
+        .restaurant__card--body-description{
+            h3{
+                font-size: 1.2em;
+            }
+        }
+        .restaurant__card--body-heart{
+            i{
+                font-size: 1.5em;
+                color: transparent;        
+                -webkit-text-stroke: 1px ;
+                -webkit-text-stroke-color: black;
+                &:hover{
+                    background: -webkit-linear-gradient(60deg, $secondary_color,$primary_color);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: 0px ;
+                }
+            }
+        }      
+    }
+    @include respond(petit) {
+        width: 85%;
+        height: 200px;
     }
 }
+
