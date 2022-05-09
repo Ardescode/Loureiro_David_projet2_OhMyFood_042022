@@ -14,15 +14,7 @@
   background: linear-gradient($direction, $list);  
 }
 
-@mixin lighten-hover($colour){
-  @if(lightness($colour) < 25%){
-    $colour:lighten($colour, 50%);
 
-   }@else{
-    $colour: darken($colour, 20%);
- 
-  }
-}
 
 @mixin flex_center{
    display: flex;
