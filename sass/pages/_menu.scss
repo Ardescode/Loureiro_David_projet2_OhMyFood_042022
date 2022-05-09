@@ -49,7 +49,8 @@
                 -webkit-text-stroke: 0px;
             }
         }
-        @include respond(moyen){
+
+        @include respond(moyen) {
             width: 50%;
         }
     }
@@ -102,15 +103,7 @@
 
 }
 
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}
 
 .menu__items {
     display: flex;
@@ -151,7 +144,18 @@
     &:nth-child(3) {
         animation: fadein 6s;
     }
-
+    &:nth-child(4) {
+        animation: fadein 8s;
+    }
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
     .menu__card--header {
         width: 80%;
         margin-left: 5%;
@@ -234,5 +238,14 @@
 
     @include respond(petit) {
         width: 95%;
+    }
+}
+
+.button__cta {
+    width: 100%;
+    @include flex_center;
+    .CTA {
+        @include CTA;
+        margin-bottom: 15%;
     }
 }
