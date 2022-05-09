@@ -245,20 +245,18 @@ main {
   width: 70%;
 }
 .landingPage .landingPage__CTA {
-  padding: 15px 20px 15px 20px;
+  padding: 15px 30px 15px 30px;
   border-radius: 30px;
   font-size: 16px;
-  background: -webkit-linear-gradient(355deg, #9356DC, #FF79DA);
-  background: -moz-linear-gradient(355deg, #9356DC, #FF79DA);
-  background: -o-linear-gradient(355deg, #9356DC, #FF79DA);
   background: linear-gradient(355deg, #9356DC, #FF79DA);
   color: white;
-  transition: box-shadow 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
   margin-top: 2%;
 }
 .landingPage .landingPage__CTA:hover {
   cursor: pointer;
-  box-shadow: 0 2px 20px #9356DC;
+  box-shadow: 0 0 20px #777777;
+  background: linear-gradient(355deg, #6023a9, #790058);
 }
 
 /* 
@@ -560,14 +558,6 @@ main {
   height: 3px;
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .menu__items {
   display: flex;
   padding: 1% 2% 1% 2%;
@@ -600,6 +590,17 @@ main {
 }
 .menu__card:nth-child(3) {
   animation: fadein 6s;
+}
+.menu__card:nth-child(4) {
+  animation: fadein 8s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu__card .menu__card--header {
   width: 80%;
@@ -669,6 +670,27 @@ main {
   .menu__card {
     width: 95%;
   }
+}
+
+.button__cta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button__cta .CTA {
+  padding: 15px 30px 15px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  background: linear-gradient(355deg, #9356DC, #FF79DA);
+  color: white;
+  transition: all 800ms ease-in-out;
+  margin-bottom: 15%;
+}
+.button__cta .CTA:hover {
+  cursor: pointer;
+  box-shadow: 0 0 20px #777777;
+  background: linear-gradient(355deg, #6023a9, #790058);
 }
 
 /*# sourceMappingURL=style.css.map */
