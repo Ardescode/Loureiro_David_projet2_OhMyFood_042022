@@ -14,7 +14,6 @@ nav {
     width: 50%;
     position: relative;
     display: flex;
-
     height: 60px;
 
     img {
@@ -35,7 +34,7 @@ nav {
     display: flex;
     height: 50px;
     align-items: center;
-    
+
 
     .nav__localisation--txt {
         width: 100%;
@@ -43,7 +42,7 @@ nav {
         font-weight: 700;
         font-size: 1em;
         text-align: end;
-        
+
         .nav__localisation--icon {
             margin-right: 2%;
         }
@@ -54,12 +53,35 @@ nav {
         justify-content: center;
         align-items: center;
         background: #EAEAEA;
-        .nav__localisation--txt{
+
+        .nav__localisation--txt {
             width: 40%;
             text-align: start;
         }
+
         .nav__localisation--icon {
             margin-right: 5%;
         }
+    }
+}
+
+.nav__Menu {
+    width: 100%;
+
+    height: 60px;
+    @include flex_center;
+    justify-content: space-between;
+    position: relative;
+
+    .nav__arrow {
+        position: absolute;
+        color: black;
+        margin-left: 5%;
+        font-size: 1.5em;
+    }
+
+    .nav__logo--menu {
+        width: 100%;
+        @include flex_center;
     }
 }

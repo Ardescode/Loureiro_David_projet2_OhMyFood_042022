@@ -14,15 +14,6 @@
   background: linear-gradient($direction, $list);  
 }
 
-@mixin lighten-hover($colour){
-  @if(lightness($colour) < 25%){
-    $colour:lighten($colour, 50%);
-
-   }@else{
-    $colour: darken($colour, 20%);
- 
-  }
-}
 
 
 @mixin flex_center{
@@ -31,61 +22,15 @@
     align-items: center;
 }
 
-@mixin working-process__card{
-  display: flex;  
-  align-items: center;
-  width: 25%;
-  background:$lightgrey;
-  height: 70px;
-  border-radius: 20px;
-  position: relative;
-  @include respond(petit){
-    width: 85%;
-  }
-  &Number{
-    position: absolute;
-    top:50%;
-    left:0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%,-50%);
-    background:$primary_color;
-    color:white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-  }
-  &Icone{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    color: #7e7e7e;
-  
-  }
-  &Txt{
-   
-    text-align: start;
-    justify-self: flex-start;
-    font-weight: bold;
-  }
-  &:hover{
-    cursor: pointer;
-    background: #F5EDFF;
-  }
-  &:hover > .workingProcess__help--cardIcone {
-    color: $primary_color;
-}
-
-}
 @mixin title{
   display: flex;
   align-items: center;
-  height: 20%;
+  height: 10%;
   align-self: flex-start;
   width: 90%;
   margin-left:5% ;
+  margin-top: 3%;
+  font-size: 2em
 }
 
 
