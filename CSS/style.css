@@ -540,7 +540,12 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
+}
+@media (max-width: 768px) {
+  .section__menu {
+    margin-bottom: 7%;
+  }
 }
 
 .menu__header {
@@ -556,6 +561,7 @@ main {
   width: 70%;
   background-color: #99E2D0;
   height: 3px;
+  margin-bottom: 7%;
 }
 
 .menu__items {
@@ -628,7 +634,17 @@ main {
   margin-bottom: 5%;
 }
 .menu__card .menu__card--animation {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 9px 9px 0;
+  width: 0;
+  color: white;
+  background: #99E2D0;
+  height: 100%;
+  transform: scaleX(0);
+  animation: progress-out 1s;
+  transform-origin: 100% 50%;
 }
 .menu__card:hover > .menu__card--animation {
   display: flex;
@@ -640,12 +656,13 @@ main {
   background: #99E2D0;
   height: 100%;
   transform: scaleX(1);
-  animation: progress 800ms ease-in-out;
+  animation: progress 1s;
   transform-origin: 100% 50%;
-  transition: progress ease-in-out;
+}
+.menu__card .fa-circle-check {
+  font-size: 2em;
 }
 .menu__card:hover > .menu__card--animation > .fa-circle-check {
-  font-size: 2em;
   transform: rotate(0deg);
   animation-name: rotation;
   animation-duration: 800ms;
@@ -656,6 +673,17 @@ main {
   }
   100% {
     transform: scaleX(1);
+  }
+}
+@keyframes progress-out {
+  0% {
+    transform: scaleX(1);
+    width: 30%;
+  }
+  100% {
+    transform: scaleX(0);
+    width: 0;
+    display: none;
   }
 }
 @keyframes rotation {
